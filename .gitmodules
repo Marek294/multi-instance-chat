@@ -1,0 +1,6 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/Marek294/multi-instance-chat-client
+[submodule "server"]
+	path = server
+	url = https://github.com/Marek294/multi-instance-chat-server
