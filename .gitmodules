@@ -4,4 +4,4 @@
 [submodule "server"]
 	path = server
 	url = https://github.com/Marek294/multi-instance-chat-server
-	branch = master
+	branch = .
