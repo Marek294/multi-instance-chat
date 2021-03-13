@@ -1,12 +1,23 @@
 version: '3'
 
 services:
-  server:
-    build: ./server
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
     volumes:
-      - ./server:/server/app/
-    env_file: .env-server
+      - ./client:/client/app/
+    env_file: .env.client
     stdin_open: true # docker run -i
     tty: true # docker run -t
     ports:
       - 80:3000
+  server:
+    build: ./server
+    volumes:
+      - ./server:/server/app/
+    env_file: .env.server
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    ports:
+      - 3000:3000
